@@ -4,13 +4,15 @@ import Sidebar from './Sidebar';
 import './App.css'
 
 function App() {
-  const [currentStep, setCurrentStep] = useState(2);
+  const [currentStep, setCurrentStep] = useState(1);
 
   return (
     <div className="flex">
-      <Sidebar currentStep={currentStep} />
+      <Sidebar currentStep={currentStep} onStepChange={setCurrentStep} />
       <main className="flex-1 p-6">
-        <h1 className="text-3xl font-bold">Chapter {currentStep}</h1>
+        <div>
+            <p>This is the content for step {currentStep}.</p>
+        </div>
         <PythonRunner />
       </main>
     </div>
