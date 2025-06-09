@@ -15,11 +15,10 @@ const steps = [
 ];
 
 export default function Sidebar({ currentStep, onStepChange }) {
-
     return (
-        <div className="w-64 min-h-screen bg-white border-r px-4 py-6">
+        <div className="w-64 min-h-screen border-r px-4 py-6 text-left">
             <div className="text-2xl font-semibold mb-6 flex items-center space-x-2">
-                <span className="text-blue-600">🏠</span>
+                <span>🏠</span>
                 <span>Python 100</span>
             </div>
             <nav className="space-y-2">
@@ -28,8 +27,11 @@ export default function Sidebar({ currentStep, onStepChange }) {
                         <li
                             key={step}
                             onClick={() => onStepChange(step)}
-                            className={`p-2 cursor-pointer rounded ${currentStep === step ? 'bg-blue-500 text-white' : 'hover:bg-gray-200'
-                                }`}
+                            className={`p-2 rounded cursor-pointer ${
+                                currentStep === step
+                                    ? 'bg-rose-300 text-white'
+                                    : 'hover:bg-rose-200'
+                            }`}
                         >
                             {step}
                         </li>
