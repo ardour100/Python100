@@ -5,7 +5,9 @@ const steps = [
   "1 - Print something",
   "2 - Using lists and tuples",
   "3 - New Functions",
-  "4 - Doing Python with Class"
+  "4 - Doing Python with Class",
+  "5 - Working with libraries",
+  "6 - Using artificial intelligence",
 ];
 
 export default function Sidebar({ currentStep }) {
